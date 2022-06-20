@@ -7,7 +7,7 @@ export default function BlogId({ blog }) {
         <p>{blog.publishedAt}</p>
         <div
           dangerouslySetInnerHTML={{
-            __html: `${blog.body}`,
+            __html: `${blog.content}`,
           }}
         />
       </main>
