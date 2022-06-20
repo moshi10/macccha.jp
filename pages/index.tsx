@@ -1,7 +1,13 @@
+import { NextPage } from "next";
 import Link from "next/link";
 import { client } from "../libs/client";
+import { Blog } from "../types/types";
 
-export default function Home({ blog }) {
+type Props = {
+  blog: Blog[]
+}
+
+const Home:NextPage<Props> =({ blog }) => {
   return (
     <div>
       <ul>
@@ -27,3 +33,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default Home;
