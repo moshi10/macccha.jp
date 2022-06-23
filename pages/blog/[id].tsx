@@ -3,6 +3,11 @@ import { client } from "../../libs/client";
 import { Blog } from "../../types/types";
 import { MicroCMSListResponse } from 'microcms-js-sdk';
 import { AppContext } from 'next/app'
+import { ParsedUrlQuery } from "node:querystring";
+
+interface Params extends ParsedUrlQuery {
+  id: string;
+}
 
 type Props = {
   blog: Blog
