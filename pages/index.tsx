@@ -1,3 +1,4 @@
+import { Box, Button } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Link from "next/link";
 import { client } from "../libs/client";
@@ -9,17 +10,17 @@ type Props = {
 
 const Home:NextPage<Props> =({ blog }) => {
   return (
-    <div>
+    <Box>
       <ul>
         {blog.map((blog) => (
-          <li key={blog.id}>
+          <Button key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
               <a>{blog.title}</a>
             </Link>
-          </li>
+          </Button>
         ))}
       </ul>
-    </div>
+    </Box>
   );
 }
 
