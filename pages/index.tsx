@@ -1,16 +1,19 @@
 import { Box, Button } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Link from "next/link";
+import { ReactElement } from "react";
+import Layout from "../components/Layout";
 import { client } from "../libs/client";
 import { Blog } from "../types/types";
+import type { NextPageWithLayout } from './_app'
 
 type Props = {
   blog: Blog[]
 }
 
-const Home:NextPage<Props> =({ blog }) => {
+const Home: NextPageWithLayout<Props> = ({ blog }) => {
   return (
-    <Box>
+    <Layout>
       <ul>
         {blog.map((blog) => (
           <Button key={blog.id}>
@@ -20,7 +23,7 @@ const Home:NextPage<Props> =({ blog }) => {
           </Button>
         ))}
       </ul>
-    </Box>
+    </Layout>
   );
 }
 
@@ -33,5 +36,13 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+// Home.getLayout = function getLayout(page: ReactElement) {
+//   return (
+//     <Layout>
+//       {page}
+//     </Layout>
+//   )
+// }
 
 export default Home;
