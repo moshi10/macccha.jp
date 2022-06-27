@@ -58,7 +58,7 @@ const SwitchMobile = () => {
         )
     }
     return (
-        <Container>
+        <Stack direction={'row'} spacing={3}>
             <NextLink href="/" passHref>
                 <Button as="a">About</Button>
             </NextLink>
@@ -68,7 +68,7 @@ const SwitchMobile = () => {
             <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
-        </Container>
+        </Stack>
 
     )
 }
