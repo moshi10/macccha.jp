@@ -31,7 +31,7 @@ const BlogId: NextPage<Props> = ({ blog }) => {
 export const getStaticPaths = async () => {
   const data = await client.get<MicroCMSListResponse<Blog>>({ endpoint: "blog" });
 
-  const paths = data.contents.map((content) => `/blog/${content.id}`);
+  const paths = data.contents.map((content) => `/blogs/${content.id}`);
   return { paths, fallback: false };
 };
 
