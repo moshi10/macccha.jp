@@ -6,30 +6,24 @@ import Layout from "../components/Layout";
 import { client } from "../libs/client";
 import { Blog } from "../types/types";
 import type { NextPageWithLayout } from './_app'
+import ArticleCard from '../components/ArticleCard';
 
 type Props = {
-  blog: Blog[]
+  blogs: Blog[]
 }
 
-const Home: NextPageWithLayout<Props> = ({ blog }) => {
+const Home: NextPageWithLayout<Props> = ({ blogs }) => {
   return (
     <Layout>
-      <ul>
-        {blog.map((blog) => (
-          <Button key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </Button>
-        ))}
-      </ul>
+      <ArticleCard blogs={blogs} />
+
     </Layout>
   );
 }
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ endpoint: "blogs" });
   return {
     props: {
       blog: data.contents,

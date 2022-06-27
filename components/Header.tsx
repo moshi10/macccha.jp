@@ -81,7 +81,7 @@ const Header = () => {
                 <Container maxW="2xl" px={4} >
                     <Flex h={16} alignItems={'center'} justifyContent={'space-between'} border={''}>
                         <NextLink href="/" passHref>
-                            <Button as="a">Matcha</Button>
+                            <Button as="a">Matchaのサイト</Button>
                         </NextLink>
 
                         <Stack direction={'row'} spacing={7}>
