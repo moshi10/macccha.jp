@@ -8,10 +8,11 @@ type Props = {
 
 
 const ArticleCard: React.FC<Props> = ({ blogs }) => {
+    console.log(blogs)
 
     return (
         <>
-            <ul>
+            {/* <ul>
                 {blogs.map((blog) => (
                     <Button key={blog.id}>
                         <Link href={`/blog/${blog.id}`}>
@@ -19,7 +20,7 @@ const ArticleCard: React.FC<Props> = ({ blogs }) => {
                         </Link>
                     </Button>
                 ))}
-            </ul>
+            </ul> */}
         </>
     )
 }
