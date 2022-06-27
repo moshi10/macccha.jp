@@ -10,17 +10,17 @@ interface Params extends ParsedUrlQuery {
 }
 
 type Props = {
-  blog: Blog
+  blogs: Blog
 }
 
-const BlogId: NextPage<Props> = ({ blog }) => {
+const BlogId: NextPage<Props> = ({ blogs }) => {
   return (
     <main>
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
+      <h1>{blogs.title}</h1>
+      <p>{blogs.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
+          __html: `${blogs.content}`,
         }}
       />
     </main>
@@ -29,7 +29,7 @@ const BlogId: NextPage<Props> = ({ blog }) => {
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
-  const data = await client.get<MicroCMSListResponse<Blog>>({ endpoint: "blog" });
+  const data = await client.get<MicroCMSListResponse<Blog>>({ endpoint: "blogs" });
 
   const paths = data.contents.map((content) => `/blogs/${content.id}`);
   return { paths, fallback: false };
