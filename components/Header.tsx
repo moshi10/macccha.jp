@@ -22,7 +22,7 @@ import { ReactNode, useState } from 'react';
 
 import NextLink from "next/link"
 
-const SwitchMobile = () => {
+const SwitchMobile: React.FC = () => {
     const isMobile = useBreakpointValue({ base: true, lg: false })
     const { colorMode, toggleColorMode } = useColorMode();
 
@@ -73,7 +73,7 @@ const SwitchMobile = () => {
     )
 }
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <>
             <Center w='100%' h="20" bg={useColorModeValue('gray.100', 'gray.900')}>

@@ -13,7 +13,6 @@ type Props = {
 }
 
 const Home: NextPageWithLayout<Props> = ({ blogs }) => {
-  console.log(blogs)
   return (
     <Layout>
       <ArticleCard blogs={blogs} />
