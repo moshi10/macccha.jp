@@ -5,7 +5,7 @@ import { MicroCMSListResponse } from 'microcms-js-sdk';
 import { AppContext } from 'next/app'
 import { ParsedUrlQuery } from "node:querystring";
 import Layout from "../../components/Layout";
-import { Heading, Text } from "@chakra-ui/react";
+import { Box, Center, Heading, Text, VStack } from "@chakra-ui/react";
 import Moment from 'react-moment'
 
 interface Params extends ParsedUrlQuery {
@@ -19,17 +19,21 @@ type Props = {
 const BlogId: NextPage<Props> = ({ blogs }) => {
   return (
     <Layout>
-      <Heading>
-        {blogs.title}
-      </Heading>
-      <Moment format="YYYY/MM/DD">
-        {blogs.publishedAt}
-      </Moment>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blogs.content}`,
-        }}
-      />
+      <Box flexGrow={1} maxW="md" overflowX="hidden">
+        <Heading fontFamily="heading">
+          {blogs.title}
+        </Heading>
+        <Moment format="YYYY/MM/DD">
+          {blogs.publishedAt}
+        </Moment>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blogs.content}`,
+          }}
+        />
+
+      </Box>
+
     </Layout>
   );
 }

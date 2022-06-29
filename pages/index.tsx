@@ -1,35 +1,38 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, VStack } from "@chakra-ui/react";
 import { NextPage } from "next";
-import Link from "next/link";
-import { ReactElement } from "react";
 import Layout from "../components/Layout";
-import { client } from "../libs/client";
+
 import { Blog } from "../types/types";
-import type { NextPageWithLayout } from './_app'
-import ArticleCard from '../components/ArticleCard';
+// Layoutのメリットがまだわからないので一旦コメントアウト
+// import type { NextPageWithLayout } from './_app'
+
+import About from "../components/About";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 type Props = {
   blogs: Blog[]
 }
 
-const Home: NextPageWithLayout<Props> = ({ blogs }) => {
-  return (
-    <Layout>
-      <ArticleCard blogs={blogs} />
+// const Home: NextPageWithLayout<Props> = ({ blogs }) => {
+const Home: NextPage<Props> = ({ blogs }) => {
 
-    </Layout>
+  return (
+    <>
+      <VStack spacing={0} align="center" minH="100vh" m="0 auto">
+        <Header />
+
+        <VStack w="100%" minH="calc(100vh - 64px)">
+          <Hero />
+        </VStack>
+
+        <Footer />
+      </VStack>
+    </>
+
   );
 }
-
-// データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
-  return {
-    props: {
-      blogs: data.contents,
-    },
-  };
-};
 
 // Home.getLayout = function getLayout(page: ReactElement) {
 //   return (

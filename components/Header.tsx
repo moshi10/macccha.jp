@@ -43,13 +43,13 @@ const SwitchMobile: React.FC = () => {
 
                 <MenuList alignItems={'center'}>
                     <MenuItem>
-                        <NextLink href="/about" passHref>
-                            <Box as="a">About</Box>
+                        <NextLink href="/notes" passHref>
+                            <Box as="a">Notes</Box>
                         </NextLink>
                     </MenuItem>
                     <MenuItem>
                         <NextLink href="/" passHref>
-                            <Box as="a">Notes</Box>
+                            <Box as="a">mada</Box>
                         </NextLink>
                     </MenuItem>
                 </MenuList>
@@ -59,11 +59,11 @@ const SwitchMobile: React.FC = () => {
     }
     return (
         <Stack direction={'row'} spacing={3}>
-            <NextLink href="/about" passHref>
-                <Button as="a">About</Button>
+            <NextLink href="/notes" passHref>
+                <Button as="a">Notes</Button>
             </NextLink>
             <NextLink href="/" passHref>
-                <Button as="a">Notes</Button>
+                <Button as="a">mada</Button>
             </NextLink>
             <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
