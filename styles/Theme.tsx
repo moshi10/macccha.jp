@@ -4,10 +4,10 @@ export const theme = extendTheme({
     styles: {
         global: {
             body: {
-                // backgroundColor: "gray.100",
-                // color: "gray.800"
+                heading: `'DotGothic16', sans-serif`,
 
             }
         }
     }
 });
+

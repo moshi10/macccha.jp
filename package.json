@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@fontsource/dotgothic16": "^4.5.8",
+    "@fontsource/open-sans": "^4.5.10",
     "framer-motion": "^6.3.13",
     "microcms-js-sdk": "^2.0.0",
     "moment": "^2.29.3",
