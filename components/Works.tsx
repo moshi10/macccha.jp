@@ -5,7 +5,9 @@ import PortfolioCard from "./PortfolioCard";
 const Works: React.FC = () => {
 
     return (
-        <PortfolioCard />
+        <>
+            <p>works</p>
+        </>
     )
 }
 
