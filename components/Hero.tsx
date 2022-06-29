@@ -15,16 +15,17 @@ import {
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react'
 import { GoMarkGithub } from 'react-icons/go'
+import Works from './Works';
 
 
 
 const Hero = () => (
-    <Box w="100%" minH="calc(100vh - 64px)" bg="pink">
+    <Box w="100%" minH="calc(100vh - 64px)">
         <VStack w="100%" h="200" bg="red.600">
 
             <Center pt="30">
                 <Image src="matcha.jpg"
-                    boxSize="300px"
+                    boxSize="250px"
                     borderRadius='full'
                     border="8px"
                     borderColor="red.600"
@@ -40,9 +41,8 @@ const Hero = () => (
                 <Text>
                     フロントエンドが好きです。
                 </Text>
-
-
             </VStack>
+            <Works />
 
         </VStack>
     </Box>

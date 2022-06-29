@@ -36,22 +36,24 @@ const SwitchMobile: React.FC = () => {
                     as={Button}
                     rounded={'full'}
                     variant={'link'}
-                    cursor={'pointer'}
-                    minW={0}>
+                    cursor={'pointer'}>
                     <ChevronDownIcon />
                 </MenuButton>
 
                 <MenuList alignItems={'center'}>
-                    <MenuItem>
-                        <NextLink href="/notes" passHref>
+
+                    <NextLink href="/notes" passHref>
+                        <MenuItem>
                             <Box as="a">Notes</Box>
-                        </NextLink>
-                    </MenuItem>
-                    <MenuItem>
-                        <NextLink href="/" passHref>
+                        </MenuItem>
+                    </NextLink>
+
+                    <NextLink href="/" passHref>
+                        <MenuItem>
                             <Box as="a">mada</Box>
-                        </NextLink>
-                    </MenuItem>
+                        </MenuItem>
+                    </NextLink>
+
                 </MenuList>
             </Menu>
 
