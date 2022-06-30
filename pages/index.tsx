@@ -28,7 +28,7 @@ const Home: NextPage<Props> = ({ blogs }) => {
 
         <VStack w="100%" minH="calc(100vh - 64px)">
           <Hero />
-          <Works />
+          <About />
         </VStack>
 
         <Footer />
