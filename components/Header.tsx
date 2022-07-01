@@ -43,7 +43,7 @@ const SwitchMobile: React.FC = () => {
 
                 <MenuList alignItems={'center'}>
 
-                    <NextLink href="/notes" passHref>
+                    <NextLink href="/blogs" passHref>
                         <MenuItem>
                             <Box as="a">Blogs</Box>
                         </MenuItem>
@@ -62,7 +62,7 @@ const SwitchMobile: React.FC = () => {
     }
     return (
         <Stack direction={'row'} spacing={3}>
-            <NextLink href="/notes" passHref>
+            <NextLink href="/blogs" passHref>
                 <Button as="a">Blogs</Button>
             </NextLink>
             {/* <NextLink href="/" passHref>
