@@ -19,20 +19,24 @@ type Props = {
 const BlogId: NextPage<Props> = ({ blogs }) => {
   return (
     <Layout>
-      <Box flexGrow={1} maxW="md" overflowX="hidden">
-        <Heading fontFamily="heading">
-          {blogs.title}
-        </Heading>
-        <Moment format="YYYY/MM/DD">
-          {blogs.publishedAt}
-        </Moment>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${blogs.content}`,
-          }}
-        />
+      <Center>
+        <VStack maxW="60%" overflowX="hidden">
+          <Heading fontFamily="heading" pb="3">
+            {blogs.title}
+          </Heading>
+          <Moment format="YYYY/MM/DD" >
+            {blogs.publishedAt}
+          </Moment>
+          <Box
+            pt="10"
+            dangerouslySetInnerHTML={{
+              __html: `${blogs.content}`,
+            }}
+          />
 
-      </Box>
+        </VStack>
+      </Center>
+
 
     </Layout>
   );
@@ -57,5 +61,6 @@ export const getStaticProps = async (context: any) => {
     },
   };
 };
+
 
 export default BlogId;

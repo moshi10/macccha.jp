@@ -32,7 +32,7 @@ const Hero = () => {
             <VStack w="100%" h="200" bg="red.600">
                 <VStack w="100%">
 
-                    <Center pt="30">
+                    <Center pt="35">
                         <Image src="matcha.jpg"
                             h={['8em', '16em', '20em', '25em']}
                             borderRadius='full'
@@ -51,13 +51,14 @@ const Hero = () => {
                             cursor="pointer"
                         />
                         <Text>
-                            フロントエンドが好きです。
+                            「環境構築から運用まで」
                         </Text>
                     </VStack>
                 </VStack>
 
 
-                <Center h={16} pt="calc(25vh - 10vh)" >
+                <VStack h={16} pt="calc(25vh - 10vh)" >
+                    <Text>Read more!</Text>
                     <Box>
                         <FaArrowCircleDown
                             fontSize="2em"
@@ -65,7 +66,8 @@ const Hero = () => {
                             cursor="pointer"
                         />
                     </Box>
-                </Center>
+
+                </VStack>
             </VStack>
         </Box>
 

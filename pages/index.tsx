@@ -38,6 +38,8 @@ const Home: NextPage<Props> = ({ blogs }) => {
   );
 }
 
+
+
 // Home.getLayout = function getLayout(page: ReactElement) {
 //   return (
 //     <Layout>

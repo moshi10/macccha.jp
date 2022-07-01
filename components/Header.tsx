@@ -15,6 +15,7 @@ import {
     useColorMode,
     Center,
     Container,
+    Image,
     useBreakpointValue,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
@@ -80,7 +81,7 @@ const Header: React.FC = () => {
         <>
             <Center w='100%' h="20" bg={useColorModeValue('gray.100', 'gray.900')}>
 
-                <Container maxW="2xl" px={4} >
+                <Container maxW="70%" px={4} >
                     <Flex h={16} alignItems={'center'} justifyContent={'space-between'} border={''}>
                         <NextLink href="/" passHref>
                             <Button as="a">Matchaのサイト</Button>
