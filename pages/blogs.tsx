@@ -10,7 +10,7 @@ type Props = {
 }
 
 
-const Notes: NextPage<Props> = ({ blogs }) => {
+const Blogs: NextPage<Props> = ({ blogs }) => {
 
     return (
         <Layout>
@@ -31,4 +31,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default Notes
+export default Blogs

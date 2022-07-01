@@ -19,8 +19,9 @@ type Props = {
 const BlogId: NextPage<Props> = ({ blogs }) => {
   return (
     <Layout>
+
       <Center>
-        <VStack maxW="60%" overflowX="hidden">
+        <VStack maxW="2xl" overflowX="hidden">
           <Heading fontFamily="heading" pb="3">
             {blogs.title}
           </Heading>

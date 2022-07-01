@@ -13,7 +13,7 @@ export default function Layout({ children }: Props) {
         <VStack spacing={0} align="center" minH="100vh" m="0 auto">
             <Header />
 
-            <Box maxW="70%" pt={16} overflowX="hidden" minH="calc(100vh - 64px)">
+            <Box maxW="90%" pt={16} overflowX="hidden" minH="calc(100vh - 64px)">
                 <Box m="0 auto">{children}</Box>
             </Box>
 
