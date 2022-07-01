@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import NextLink from "next/link"
 import {
     Center,
     Flex,
@@ -44,12 +45,14 @@ const Hero = () => {
                         <Heading >
                             ﾏｯﾁｬ
                         </Heading>
-                        <Icon
-                            as={GoMarkGithub}
-                            w={6}
-                            h={6}
-                            cursor="pointer"
-                        />
+                        <NextLink href="https://github.com/moshi10" passHref target="_blank">
+                            <Icon
+                                as={GoMarkGithub}
+                                w={6}
+                                h={6}
+                                cursor="pointer"
+                            />
+                        </NextLink>
                         <Text>
                             「環境構築から運用まで」
                         </Text>
