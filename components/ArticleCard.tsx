@@ -20,14 +20,7 @@ const ArticleCard: React.FC<Props> = ({ blogs }) => {
                     <Center key={blog.id} py={6} border="1px">
                         <NextLink href={`/blogs/${blog.id}`}>
                             <Box maxW={'445px'} w={'full'}>
-                                <Box h={'210px'} bg={'gray.100'}>
-                                    <Image
-                                        src={blog.eyecatch?.url}
-                                        objectFit="fill"
-                                        borderRadius="lg"
-                                        h="126"
-                                        w="240" />
-                                </Box>
+
                                 <Stack>
                                     <Moment format="YYYY/MM/DD">
                                         {blog.publishedAt}
