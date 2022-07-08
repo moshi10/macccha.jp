@@ -64,8 +64,8 @@ interface ProductionProps {
 
 const Production = ({ title, text, icon, url }: ProductionProps) => {
     return (
-        <Stack>
-            <NextLink href={url}>
+        <NextLink href={url}>
+            <Stack>
                 <Flex
                     w={16}
                     h={16}
@@ -74,13 +74,15 @@ const Production = ({ title, text, icon, url }: ProductionProps) => {
                     color={'white'}
                     rounded={'full'}
                     bg={'gray.100'}
-                    mb={1}>
+                    mb={1}
+                    cursor="pointer"
+                >
                     {icon}
                 </Flex>
                 <Text fontWeight={600}>{title}</Text>
                 <Text color={'gray.600'}>{text}</Text>
-            </NextLink>
-        </Stack>
+            </Stack>
+        </NextLink>
     );
 };
 
