@@ -11,6 +11,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Works from "../components/Works";
 
 
 type Props = {
@@ -34,6 +35,7 @@ const Home: NextPage<Props> = ({ blogs }) => {
         <VStack w="100%" minH="calc(100vh - 64px)">
           <Hero />
           <About />
+          <Works />
         </VStack>
 
         <Footer />

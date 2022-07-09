@@ -24,6 +24,7 @@ const ArticleCard: React.FC<Props> = ({ blogs }) => {
                         borderColor="red.600"
                         borderRadius="lg"
                         cursor={"pointer"}
+                        _hover={{ boxShadow: "md" }}
                     >
                         <NextLink href={`/blogs/${blog.id}`}>
                             <Box maxW={'445px'} w={'full'}>

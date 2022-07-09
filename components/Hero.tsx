@@ -46,8 +46,10 @@ const Hero = () => {
                     <Heading >
                         ﾏｯﾁｬ
                     </Heading>
-                    <NextLink href="https://github.com/moshi10" passHref target="_blank">
+                    <NextLink href="https://github.com/moshi10" passHref target="_blank" >
                         <Icon
+                            _hover={{ boxShadow: "md" }}
+                            borderRadius="full"
                             as={GoMarkGithub}
                             w={6}
                             h={6}
@@ -58,16 +60,14 @@ const Hero = () => {
                         「環境構築から運用まで」
                     </Text>
                 </VStack>
-
-
-
                 <VStack h={16} pt="calc(25vh - 10vh)" >
                     <Text>Read more!</Text>
-                    <Box>
+                    <Box _hover={{ boxShadow: "md" }} borderRadius="full">
                         <FaArrowCircleDown
                             fontSize="2em"
                             onClick={scrollToBottom}
                             cursor="pointer"
+
                         />
                     </Box>
 
