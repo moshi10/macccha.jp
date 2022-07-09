@@ -64,32 +64,32 @@ const About: React.FC = () => {
                     <AboutCard
                         title="マークアップ言語"
                         text="HTML,CSS(SCSS)"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
                     <AboutCard
                         title="フロントエンド"
                         text="JavaScript,TypeScript,React.js,Next.js,Gatsby.js,MUI,Chakra UI,CSS-Modules"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
                     <AboutCard
                         title="バックエンド"
                         text="Ruby,Ruby on Rails"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
                     <AboutCard
                         title="開発環境"
                         text="WSL2(Ubuntu20.04),Git,VSCode,Node.js,Docker,Prettier,ESLint"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
                     <AboutCard
                         title="インフラ"
                         text="Vercel,Netlify,Heroku"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
                     <AboutCard
                         title="その他"
                         text="GraphQL"
-                        icon=""
+                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
                     />
 
 
