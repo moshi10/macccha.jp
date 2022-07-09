@@ -17,7 +17,14 @@ const ArticleCard: React.FC<Props> = ({ blogs }) => {
             {blogs.map((blog) => (
 
                 <Box>
-                    <Center key={blog.id} py={6} border="1px">
+                    <Center
+                        key={blog.id}
+                        p={5}
+                        border="2px"
+                        borderColor="red.600"
+                        borderRadius="lg"
+                        cursor={"pointer"}
+                    >
                         <NextLink href={`/blogs/${blog.id}`}>
                             <Box maxW={'445px'} w={'full'}>
 
@@ -25,9 +32,9 @@ const ArticleCard: React.FC<Props> = ({ blogs }) => {
                                     <Moment format="YYYY/MM/DD">
                                         {blog.publishedAt}
                                     </Moment>
-                                    <Heading>
+                                    <Text fontWeight="600" fontSize="xl">
                                         {blog.title}
-                                    </Heading>
+                                    </Text>
                                 </Stack>
                             </Box>
                         </NextLink>

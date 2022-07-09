@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
 
     return (
         <>
-            <Center borderTop="1px" w='70%' h="20" >
+            <Center borderTop="2px" borderColor="red.600" maxW='1200px' w="90%" h="20" >
                 <p>&copy; {date.getFullYear()}, Matcha All rights reserved.</p>
             </Center>
         </>
