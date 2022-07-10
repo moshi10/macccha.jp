@@ -60,7 +60,7 @@ const Works: React.FC = () => {
     return (
         <VStack py="20" maxW="1200px">
             <Heading>About Me</Heading>
-            <Text pt="10">高校卒業後、フリーターをしながら独学でプログラミングを学びました。環境構築からデプロイまで走り切ることを目標に日々努力しています。</Text>
+            <Text pt="10" maxW="700px">高校卒業後、フリーターをしながら独学でプログラミングを学びました。環境構築からデプロイまで走り切ることを目標に日々努力しています。</Text>
             <Heading py="10">Works</Heading>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10} pt="10">
 
