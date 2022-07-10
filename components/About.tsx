@@ -1,4 +1,4 @@
-import { Box, Button, Center, UnorderedList, ListItem, Container, Heading, HStack, VStack, Stack, Text, SimpleGrid, Image, Icon, Flex } from "@chakra-ui/react";
+import { Box, Button, Center, UnorderedList, ListItem, Container, Heading, HStack, VStack, Stack, Text, SimpleGrid, Image, Icon, Flex, CircularProgress } from "@chakra-ui/react";
 import NextLink from "next/link"
 import { ReactNode } from "react";
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
@@ -7,11 +7,11 @@ import Twemoji from 'react-twemoji';
 
 interface AboutCardProps {
     title: string;
-    text: string;
+    textList: string[];
     icon: ReactNode;
 }
 
-const AboutCard: React.FC<AboutCardProps> = ({ title, text, icon }) => {
+const AboutCard: React.FC<AboutCardProps> = ({ title, textList, icon }) => {
     return (
         <VStack
             maxW="300px"
@@ -19,14 +19,10 @@ const AboutCard: React.FC<AboutCardProps> = ({ title, text, icon }) => {
             borderColor={"red.600"}
             borderRadius="lg"
             overflow="hidden"
-            cursor="pointer"
-            _hover={{ boxShadow: "md" }}
+
         >
+            <Text >好き度</Text>
             <Center
-                border="2px"
-                borderColor={"red.600"}
-                bg="red.600"
-                borderWidth="thin"
                 borderTopRadius="md"
                 w="100%"
                 overflow="hidden"
@@ -45,7 +41,17 @@ const AboutCard: React.FC<AboutCardProps> = ({ title, text, icon }) => {
             </Center>
             <VStack py="5" px="10">
                 <Text fontWeight={600}>{title}</Text>
-                <Text >{text}</Text>
+                <Box maxW="200">
+                    <UnorderedList>
+                        {textList.map((text) => {
+                            return (
+                                <ListItem>
+                                    {text}
+                                </ListItem>
+                            )
+                        })}
+                    </UnorderedList>
+                </Box>
             </VStack>
         </VStack>
     )
@@ -55,41 +61,37 @@ const About: React.FC = () => {
     return (
         <VStack py="20" maxW="1200px" >
             <VStack>
-                <Heading>About Me</Heading>
-                <Text pt="5">高校卒業後、フリーターをしながら独学でプログラミングを学びました。環境構築からデプロイまで走り切ることを目標に日々努力しています。</Text>
-            </VStack>
-            <VStack>
-                <Heading pt="5">Skill set</Heading>
+                <Heading>Skill Set</Heading>
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10} pt="10">
                     <AboutCard
                         title="マークアップ言語"
-                        text="HTML,CSS(SCSS)"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["HTML", "CSS", "SCSS"]}
+                        icon={<CircularProgress value={50} size='100px' color='red.600' thickness='8px' />}
                     />
                     <AboutCard
                         title="フロントエンド"
-                        text="JavaScript,TypeScript,React.js,Next.js,Gatsby.js,MUI,Chakra UI,CSS-Modules"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["JavaScript", "TypeScript", "React.js", "Next.js", "Gatsby.js", "MUI", "Chakra UI", "CSS-Modules"]}
+                        icon={<CircularProgress value={80} size='100px' color='red.600' thickness='8px' />}
                     />
                     <AboutCard
                         title="バックエンド"
-                        text="Ruby,Ruby on Rails"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["Ruby", "Ruby on Rails"]}
+                        icon={<CircularProgress value={29} size='100px' color='red.600' thickness='8px' />}
                     />
                     <AboutCard
                         title="開発環境"
-                        text="WSL2(Ubuntu20.04),Git,VSCode,Node.js,Docker,Prettier,ESLint"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["WSL2(Ubuntu20.04)", "Git", "VSCode", "Node.js", "Docker", "Prettier", "ESLint"]}
+                        icon={<CircularProgress value={5} size='100px' color='red.600' thickness='8px' />}
                     />
                     <AboutCard
                         title="インフラ"
-                        text="Vercel,Netlify,Heroku"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["Vercel", "Netlify", "Heroku"]}
+                        icon={<CircularProgress value={40} size='100px' color='red.600' thickness='8px' />}
                     />
                     <AboutCard
                         title="その他"
-                        text="GraphQL"
-                        icon={<Image alt="🍒" src="https://twemoji.maxcdn.com/2/svg/1f352.svg" w={10} h={10} />}
+                        textList={["GraphQL"]}
+                        icon={<CircularProgress value={30} size='100px' color='red.600' thickness='8px' />}
                     />
 
 
