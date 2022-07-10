@@ -1,4 +1,4 @@
-import { Box, Button, Center, Container, Heading, HStack, VStack, Stack, Text, SimpleGrid, Image, Icon, Flex } from "@chakra-ui/react";
+import { Center, Heading, VStack, Text, SimpleGrid, Image, ListItem, UnorderedList } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import NextLink from "next/link"
 
@@ -8,9 +8,10 @@ interface WorksCardProps {
     text: string;
     icon: ReactNode;
     url: string;
+    techList: string[];
 }
 
-const WorksCard = ({ title, text, icon, url }: WorksCardProps) => {
+const WorksCard = ({ title, text, icon, url, techList }: WorksCardProps) => {
     return (
         <NextLink href={url} >
             <VStack
@@ -46,6 +47,17 @@ const WorksCard = ({ title, text, icon, url }: WorksCardProps) => {
                 <VStack py="5" px="10">
                     <Text fontWeight={600}>{title}</Text>
                     <Text>{text}</Text>
+                    <Text fontWeight={600}>使用技術</Text>
+                    <UnorderedList>
+                        {techList.map((tech) => {
+                            return (
+                                <ListItem>
+                                    {tech}
+                                </ListItem>
+                            )
+                        })}
+                    </UnorderedList>
+
                 </VStack>
 
             </VStack>
@@ -71,6 +83,7 @@ const Works: React.FC = () => {
                         'ﾏｯﾁｬが初めて作ったwebサイトです。'
                     }
                     url="https://matcha-blog.netlify.app/"
+                    techList={["Gatsby.js", "Contentful", "Netlify"]}
                 />
                 <WorksCard
                     icon={<Image alt="📝" src="https://twemoji.maxcdn.com/2/svg/1f4dd.svg" w={10} h={10} />}
@@ -79,6 +92,7 @@ const Works: React.FC = () => {
                         'vueの勉強会に参加した時に作ったtodoアプリです。'
                     }
                     url="https://matcha-vue-todo-app.vercel.app/"
+                    techList={["Vue.js", "Vercel"]}
                 />
                 <WorksCard
                     icon={<Image alt="✍" src="https://twemoji.maxcdn.com/2/svg/270d.svg" w={10} h={10} />}
@@ -87,6 +101,7 @@ const Works: React.FC = () => {
                         'このサイトについてです。'
                     }
                     url="https://macccha.jp/blogs/3dte6dtuy5r"
+                    techList={["Next.js", "TypeScript", "MicroCMS", "Vercel"]}
                 />
             </SimpleGrid>
         </VStack>

@@ -2,22 +2,15 @@ import React, { useCallback } from 'react';
 import NextLink from "next/link"
 import {
     Center,
-    Flex,
     Box,
     Image,
     Heading,
-    Stack,
     Text,
-    SlideFade,
-    IconButton,
     VStack,
-    HStack,
-    Button,
 } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react'
 import { GoMarkGithub } from 'react-icons/go'
 import { FaArrowCircleDown } from 'react-icons/fa';
-import Works from './Works';
 
 const Hero = () => {
     const scrollToBottom = () => {

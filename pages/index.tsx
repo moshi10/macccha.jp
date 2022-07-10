@@ -1,6 +1,5 @@
-import { Box, Button, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { NextPage } from "next";
-import Layout from "../components/Layout";
 import Head from 'next/head'
 
 import { Blog } from "../types/types";

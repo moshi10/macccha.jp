@@ -1,26 +1,19 @@
 import {
     Box,
     Flex,
-    Avatar,
-    Link,
     Button,
     Menu,
     MenuButton,
     MenuList,
     MenuItem,
-    MenuDivider,
-    useDisclosure,
     useColorModeValue,
     Stack,
     useColorMode,
     Center,
     Container,
-    Image,
     useBreakpointValue,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { ReactNode, useState } from 'react';
-
 import NextLink from "next/link"
 
 const SwitchMobile: React.FC = () => {

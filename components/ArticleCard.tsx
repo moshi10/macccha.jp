@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Stack, Text, VStack, Image, Center } from "@chakra-ui/react";
+import { Box, Stack, Text, Center } from "@chakra-ui/react";
 import { Blog } from "../types/types";
 import Moment from "react-moment"
 import NextLink from "next/link"

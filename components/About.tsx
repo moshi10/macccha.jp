@@ -1,9 +1,5 @@
-import { Box, Button, Center, UnorderedList, ListItem, Container, Heading, HStack, VStack, Stack, Text, SimpleGrid, Image, Icon, Flex, CircularProgress } from "@chakra-ui/react";
-import NextLink from "next/link"
+import { Box, Center, UnorderedList, ListItem, Heading, VStack, Text, SimpleGrid, CircularProgress } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-import Twemoji from 'react-twemoji';
-
 
 interface AboutCardProps {
     title: string;
@@ -19,9 +15,8 @@ const AboutCard: React.FC<AboutCardProps> = ({ title, textList, icon }) => {
             borderColor={"red.600"}
             borderRadius="lg"
             overflow="hidden"
-
         >
-            <Text >好き度</Text>
+            <Text>好き度</Text>
             <Center
                 borderTopRadius="md"
                 w="100%"
