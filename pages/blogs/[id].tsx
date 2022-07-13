@@ -29,7 +29,7 @@ const BlogId: NextPage<Props> = ({ blogs }) => {
             {blogs.publishedAt}
           </Moment>
           <Box
-            pt="10"
+            py="10"
             dangerouslySetInnerHTML={{
               __html: `${blogs.content}`,
             }}
