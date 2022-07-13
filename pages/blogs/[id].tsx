@@ -21,7 +21,7 @@ const BlogId: NextPage<Props> = ({ blogs }) => {
     <Layout>
 
       <Center>
-        <VStack maxW="2xl" overflowX="hidden">
+        <VStack maxW="2xl">
           <Heading fontFamily="heading" pb="3">
             {blogs.title}
           </Heading>
