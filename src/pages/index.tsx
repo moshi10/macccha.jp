@@ -1,26 +1,13 @@
 import { VStack } from "@chakra-ui/react";
 import { NextPage } from "next";
 import Head from 'next/head'
-
-import { Blog } from "../types/types";
-// Layoutのメリットがまだわからないので一旦コメントアウト
-// import type { NextPageWithLayout } from './_app'
-
 import About from "../components/About";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Works from "../components/Works";
 
-
-type Props = {
-  blogs: Blog[]
-}
-
-// const Home: NextPageWithLayout<Props> = ({ blogs }) => {
-const Home: NextPage<Props> = ({ blogs }) => {
-
-
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -30,29 +17,16 @@ const Home: NextPage<Props> = ({ blogs }) => {
       </Head>
       <VStack spacing={0} align="center" minH="100vh" m="0 auto">
         <Header />
-
         <VStack w="100%" minH="calc(100vh - 64px)">
           <Hero />
           <Works />
           <About />
-
         </VStack>
-
         <Footer />
       </VStack>
     </>
 
   );
 }
-
-
-
-// Home.getLayout = function getLayout(page: ReactElement) {
-//   return (
-//     <Layout>
-//       {page}
-//     </Layout>
-//   )
-// }
 
 export default Home;
